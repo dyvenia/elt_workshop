@@ -20,14 +20,9 @@ We'll be using GitHub and `docker-compose` during the workshop. To save everyone
 [LINK](https://git-scm.com/downloads)
 
 ### 3. Set up GitHub
-a. set up an SSH key
-- [LINK](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
-- basically: `ssh-keygen -t gh_dyvenia_workshops -C "your_email@example.com"` and paste the contents inside a new key in `Settings -> SSH and GPG keys` on GitHub
-
-b. save the passphrase locally so we don't have to provide it every time:
-`eval $(ssh-agent) && ssh-add ~/.ssh/gh_dyvenia_workshops`
-On Mac:
-`ssh-add -K`
+- create a Personal Access Token: [LINK](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+- make GitHub remember the credentials: `git config --global credential.helper store`
+- pull the [ELT workshop](https://github.com/dyvenia/elt_workshop) repo and provide the generated token as password: `git clone https://github.com/dyvenia/elt_workshop.git`
 
 ### 4. Install Docker
 TODO
