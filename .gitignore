@@ -130,3 +130,11 @@ dmypy.json
 
 # Prefect
 config.toml
+.prefect
+
+# Jupyter
+.local
+.jupyter
+
+# Airbyte
+temporal/
