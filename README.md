@@ -2,7 +2,7 @@
 Materials for the "Building a modern data platform with Python and open-source tools" workshop.
 
 ## Pre-workshop set up
-We'll be using GitHub and `docker-compose` during the workshop. To save everyone's time, please make sure you have these two tools set up before we begin.
+We'll be using Prefect Cloud, GitHub, and Docker during the workshop. To save everyone's time, please make sure you have these two tools set up before we begin.
 
 ### 1. Set up Prefect Cloud
 - go to https://cloud.prefect.io
