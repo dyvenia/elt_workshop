@@ -5,7 +5,7 @@ Materials for the "Building a modern data platform with Python and open-source t
 We'll be using Prefect Cloud, GitHub, and Docker during the workshop. To save everyone's time, please make sure you have at minimum Git + Docker with Airbyte images set up before we begin (as it needs to download quite a lot of data).
 
 ### 0. Don't use a Macbook with M1 chip
-Just to make everyone's life easier.
+It's fine for watching Netflix but less so for local development. 
 
 ### 1. Install Git
 [LINK](https://git-scm.com/downloads)
@@ -51,3 +51,7 @@ This concludes the set up. Execute `docker-compose down` to spin down Airbyte.
     - choose an expiration date (for us a month is enough)
     - click "CREATE"
     - provide the token as the value of `auth_token` in .prefect/config.toml.EXAMPLE and rename the file to config.toml
+
+### 2. Set up VSCode
+- download: [LINK](https://code.visualstudio.com/download)
+- install extensions: Python, Python Docstring Generator, Live Share
