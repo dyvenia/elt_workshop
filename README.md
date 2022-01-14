@@ -4,6 +4,9 @@ Materials for the "Building a modern data platform with Python and open-source t
 ## Pre-workshop set up
 We'll be using Prefect Cloud, GitHub, and Docker during the workshop. To save everyone's time, please make sure you have at minimum Git + Docker with Airbyte images set up before we begin (as it needs to download quite a lot of data).
 
+### 0. Don't use a Macbook with M1 chip
+Just to make everyone's life easier.
+
 ### 1. Install Git
 [LINK](https://git-scm.com/downloads)
 
