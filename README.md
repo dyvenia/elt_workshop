@@ -17,7 +17,7 @@ We'll be using Prefect Cloud, GitHub, and Docker during the workshop. To save ev
 - Linux: [LINK](https://docs.docker.com/engine/install/#server)
 
 ### 4. Install docker-compose
-> **NOTE** Only required on Linux
+> **NOTE** Linux-only (it's built into Docker on other systems)
 ```
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
