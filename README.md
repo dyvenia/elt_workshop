@@ -13,10 +13,16 @@ We'll be using Prefect Cloud, GitHub, and Docker during the workshop. To save ev
 - pull the [ELT workshop](https://github.com/dyvenia/elt_workshop) repo and provide the generated token as password: `git clone https://github.com/dyvenia/elt_workshop.git`
 
 ### 3. Install Docker
-TODO
+- Windows/Mac: [LINK](https://docs.docker.com/get-docker/)
+- Linux: [LINK](https://docs.docker.com/engine/install/#server)
 
 ### 4. Install docker-compose
-TODO
+> **NOTE** Only required on Linux
+```
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+```
 
 ### 5. Set up Airbyte
 Run the following commands:
@@ -27,6 +33,8 @@ docker-compose up
 ```
 
 Once you see an Airbyte banner, the UI is ready at `localhost:8000`.
+
+This concludes the set up. Execute `docker-compose down` to spin down Airbyte.
 
 ## Workshop set up
 ### 1. Set up Prefect Cloud
