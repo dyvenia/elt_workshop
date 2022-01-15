@@ -1,14 +1,13 @@
-from prefect.storage import GitHub
+from prefect import Flow, task
+from prefect.engine.state import Failed
 from prefect.run_configs.docker import DockerRun
-from prefect.utilities.notifications import slack_notifier
 from prefect.schedules import Schedule
 from prefect.schedules.clocks import CronClock
-from prefect.engine.state import Failed
-from prefect import Flow, task
-
+from prefect.storage import GitHub
+from prefect.utilities.notifications import slack_notifier
 
 STORAGE = GitHub(
-    repo="dyvenia/elt_workshop", path="elt_workshop/prefect/hello_world_2.py"
+    repo="dyvenia/elt_workshop", path="elt_workshop/prefect/hello_world_dev.py"
 )
 RUN_CONFIG = DockerRun(
     image="prefecthq/prefect:0.15.11-python3.9",
@@ -16,7 +15,7 @@ RUN_CONFIG = DockerRun(
     labels=["dev"],
 )
 SLACK_NOTIFIER = slack_notifier(only_states=[Failed])
-SCHEDULE = Schedule(clocks=[CronClock("*/5 * * * *")])
+SCHEDULE = Schedule(clocks=[CronClock("* */12 * * *")])
 
 
 @task
@@ -25,7 +24,7 @@ def echo(text):
 
 
 with Flow(
-    "My first prod Prefect flow",
+    "Hello, world - dev",
     storage=STORAGE,
     run_config=RUN_CONFIG,
     state_handlers=[SLACK_NOTIFIER],
