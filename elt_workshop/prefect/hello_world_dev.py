@@ -23,6 +23,11 @@ def echo(text):
     return text
 
 
+@task
+def failing_task():
+    raise ValueError("Ooopsie")
+
+
 with Flow(
     "Hello, world - dev",
     storage=STORAGE,
@@ -31,3 +36,4 @@ with Flow(
     schedule=SCHEDULE,
 ) as flow:
     hello_world = echo("Hello, world!")
+    fail = failing_task()
