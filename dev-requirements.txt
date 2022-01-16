@@ -1,0 +1,5 @@
+black==21.12b0
+# Prefect is also required to start the Docker Agent.
+# However, as we want to keep it in sync with the version in the Docker image,
+# we store the version in one place instead (.env file) and use it both here
+# and in docker-compose and install the library locally within setup.sh.

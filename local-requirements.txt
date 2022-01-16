@@ -1,4 +1,0 @@
-black==21.12b0
-# Required to start Prefect's Docker Agent
-# Should be in sync with the version in docker/.env file
-prefect==0.15.11

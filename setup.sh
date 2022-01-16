@@ -3,12 +3,14 @@ if [ -f docker/.env ]; then
   export $(echo $(cat docker/.env | sed 's/#.*//g'| xargs) | envsubst)
 fi
 
-pip install -r local-requirements.txt
+python3 -m pip install --user pipx
+python3 -m pipx ensurepath
+pipx install prefect==$PREFECT_VERSION
 
 # Authenticate to DockerHub
 docker login -u=$DOCKERHUB_USER -p=$DOCKERHUB_TOKEN
 
-docker build . -t prefect_with_jupyter -f docker/Dockerfile
+docker build . -t local/prefect_with_jupyter -f docker/Dockerfile --build-arg PREFECT_VERSION=$PREFECT_VERSION-python3.9
 
 cd docker && \
   docker-compose up -d && \
