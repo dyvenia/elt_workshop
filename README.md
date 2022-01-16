@@ -39,6 +39,10 @@ Once you see an Airbyte banner, the UI is ready at `localhost:8000`.
 
 This concludes the set up. Execute `docker-compose down` to spin down Airbyte.
 
+### 6. Check that everything is running:
+- cretae a `.env` file in the `docker` folder (you can also just remove the `.EXAMPLE` from the example `.env` file)
+- provide values for the three variables at the top (`DOCKERHUB_USER`, `DOCKERHUB_TOKEN`, `PREFECT_API_KEY`)
+
 ## Workshop set up
 ### 1. Set up Prefect Cloud
 - go to https://cloud.prefect.io
