@@ -1,5 +1,5 @@
-# TODO: Unpin the version
-FROM prefecthq/prefect:0.15.11
+ARG PREFECT_VERSION
+FROM prefecthq/prefect:$PREFECT_VERSION
 
 COPY requirements.txt .
 RUN pip install -r requirements.txt
