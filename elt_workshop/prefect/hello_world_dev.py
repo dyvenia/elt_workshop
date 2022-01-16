@@ -6,8 +6,10 @@ from prefect.schedules.clocks import CronClock
 from prefect.storage import GitHub
 from prefect.utilities.notifications import slack_notifier
 
+ELT_WORKSHOP_REPO = "dyvenia/elt_workshop"
 STORAGE = GitHub(
-    repo="dyvenia/elt_workshop", path="elt_workshop/prefect/hello_world_dev.py"
+    repo=ELT_WORKSHOP_REPO,
+    path="elt_workshop/prefect/hello_world_dev.py"
 )
 RUN_CONFIG = DockerRun(
     image="prefecthq/prefect:0.15.11-python3.9",
