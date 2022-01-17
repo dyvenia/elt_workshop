@@ -20,7 +20,9 @@ Great for many things, but not yet for local data engineering development.
 
 ### 4. Authenticate with Docker Hub
 - run `docker login`
-- Docker will ask you to provide your DockerHub username and password. Provide your username and access token, which you can generate in `hub.docker.com -> fingerprint icon -> Account Settings -> Security -> New Access Token`. Make sure to save that token for step 7.
+- Docker will ask you to provide your DockerHub username and password.  
+Provide your username and access token, which you can generate in `hub.docker.com -> fingerprint icon -> Account Settings -> Security -> New Access Token`.  
+Make sure to save that token for step 7.
 
 ### 5. Install docker-compose
 > **NOTE** Linux-only (it's built into Docker on other systems)
