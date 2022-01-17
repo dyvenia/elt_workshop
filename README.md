@@ -37,7 +37,7 @@ docker-compose up
 
 Once you see an Airbyte banner, the UI is ready at `localhost:8000`.
 
-This concludes the set up. Execute `docker-compose down` to spin down Airbyte.
+This concludes the set up. Hit `CTRL`+`C` to spin down Airbyte.
 
 ### 6. Check that everything is running:
 - cretae a `.env` file in the `docker` folder (you can also just remove the `.EXAMPLE` from the example `.env` file)
