@@ -45,7 +45,7 @@ This concludes the set up. Hit `CTRL`+`C` to spin down Airbyte.
 
 ### 7. Check that everything is running:
 - cretae a `.env` file in the `docker` folder (you can also just remove the `.EXAMPLE` from the example `.env` file)
-- provide values for the three variables at the top (`DOCKERHUB_USER`, `DOCKERHUB_TOKEN`, `PREFECT_API_KEY`)
+- provide values for the two variables at the top (`DOCKERHUB_USER`, `DOCKERHUB_TOKEN`)
 
 ## Workshop set up
 ### 1. Set up Prefect Cloud
@@ -59,6 +59,7 @@ This concludes the set up. Hit `CTRL`+`C` to spin down Airbyte.
     - choose an expiration date (for us a month is enough)
     - click "CREATE"
     - provide the token as the value of `auth_token` in .prefect/config.toml.EXAMPLE and rename the file to config.toml
+- add the key to `docker/.env` as `PREFECT_API_KEY`
 
 ### 2. Set up VSCode
 - download: [LINK](https://code.visualstudio.com/download)
