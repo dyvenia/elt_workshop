@@ -1,6 +1,14 @@
 # Data platform workshop
 Materials for the "Building a modern data platform with Python and open-source tools" workshop.
 
+## Agenda
+1. Intro + set up - 1hr
+2. Intro to Prefect - 1.5hr
+3. Break - 15min
+4. Airbyte - existing source - 1hr
+5. Airbyte - new source 1hr
+6. Wrap up - 15min
+
 ## Pre-workshop set up
 We'll be using GitHub, Docker, Prefect Cloud, and Airbyte during the workshop. To save everyone's time, please make sure you have at minimum Git + Docker with Airbyte images set up before we begin (as it needs to download quite a lot of data).
 
