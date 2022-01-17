@@ -19,6 +19,10 @@ It's fine for watching Netflix but less so for local data engineering developmen
 - Windows/Mac: [LINK](https://docs.docker.com/get-docker/)
 - Linux: [LINK](https://docs.docker.com/engine/install/#server)
 
+### 4. Authenticate with Docker Hub
+`docker login`
+Docker will ask you to provide your DockerHub username and password. Provide your username and access token, which you can generate in `hub.docker.com -> fingerprint icon -> Account Settings -> Security -> New Access Token`.
+
 ### 4. Install docker-compose
 > **NOTE** Linux-only (it's built into Docker on other systems)
 ```
