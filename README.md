@@ -5,7 +5,7 @@ Materials for the "Building a modern data platform with Python and open-source t
 We'll be using GitHub, Docker, Prefect Cloud, and Airbyte during the workshop. To save everyone's time, please make sure you have at minimum Git + Docker with Airbyte images set up before we begin (as it needs to download quite a lot of data).
 
 ### 0. Don't use a Macbook with M1 chip
-It's fine for watching Netflix but less so for local data engineering development. 
+Great for many things, but not yet for local data engineering development. 
 
 ### 1. Install Git
 [LINK](https://git-scm.com/downloads)
