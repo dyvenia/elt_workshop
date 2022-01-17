@@ -21,9 +21,9 @@ It's fine for watching Netflix but less so for local data engineering developmen
 
 ### 4. Authenticate with Docker Hub
 `docker login`
-Docker will ask you to provide your DockerHub username and password. Provide your username and access token, which you can generate in `hub.docker.com -> fingerprint icon -> Account Settings -> Security -> New Access Token`.
+Docker will ask you to provide your DockerHub username and password. Provide your username and access token, which you can generate in `hub.docker.com -> fingerprint icon -> Account Settings -> Security -> New Access Token`. Make sure to save that token for step 7.
 
-### 4. Install docker-compose
+### 5. Install docker-compose
 > **NOTE** Linux-only (it's built into Docker on other systems)
 ```
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
@@ -31,7 +31,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 ```
 
-### 5. Set up Airbyte
+### 6. Set up Airbyte
 Run the following commands:
 ```
 git clone https://github.com/airbytehq/airbyte.git
@@ -43,7 +43,7 @@ Once you see an Airbyte banner, the UI is ready at `localhost:8000`.
 
 This concludes the set up. Hit `CTRL`+`C` to spin down Airbyte.
 
-### 6. Check that everything is running:
+### 7. Check that everything is running:
 - cretae a `.env` file in the `docker` folder (you can also just remove the `.EXAMPLE` from the example `.env` file)
 - provide values for the three variables at the top (`DOCKERHUB_USER`, `DOCKERHUB_TOKEN`, `PREFECT_API_KEY`)
 
