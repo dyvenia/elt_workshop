@@ -6,7 +6,7 @@ Materials for the "Building a modern data platform with Python and open-source t
 2. Intro to Prefect - 1.5hr
 3. Break - 15min
 4. Airbyte - existing source - 1hr
-5. Airbyte - new source 1hr
+5. Airbyte - new source 1hr (bonus)
 6. Wrap up - 15min
 
 ## Pre-workshop set up
