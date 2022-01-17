@@ -46,6 +46,7 @@ This concludes the set up. Hit `CTRL`+`C` to spin down Airbyte.
 ### 7. Check that everything is running:
 - cretae a `.env` file in the `docker` folder (you can also just remove the `.EXAMPLE` from the example `.env` file)
 - provide values for the two variables at the top (`DOCKERHUB_USER`, `DOCKERHUB_TOKEN`)
+- run `sh setup.sh`
 
 ## Workshop set up
 ### 1. Set up Prefect Cloud
