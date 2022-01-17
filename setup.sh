@@ -8,9 +8,8 @@ python3 -m pipx ensurepath
 pipx install prefect==$PREFECT_VERSION
 
 # Authenticate to DockerHub
-docker login -u=$DOCKERHUB_USER -p=$DOCKERHUB_TOKEN
-
-docker build . -t local/prefect_with_jupyter -f docker/Dockerfile --build-arg PREFECT_VERSION=$PREFECT_VERSION-python3.9
+docker login registry-1.docker.io -u=$DOCKERHUB_USER -p=$DOCKERHUB_TOKEN
+docker build . -t local/jupyter_with_prefect -f docker/Dockerfile --build-arg PREFECT_VERSION=$PREFECT_VERSION-python3.9
 
 cd docker && \
   docker-compose up -d && \
