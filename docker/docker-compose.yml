@@ -194,7 +194,7 @@ services:
       - ./temporal/dynamicconfig:/etc/temporal/config/dynamicconfig
 
   jupyter_lab:
-    image: local/prefect_with_jupyter
+    image: ghcr.io/dyvenia/viadot/viadot:0.2.15
     container_name: elt_workshop_jupyter_lab
     ports:
       - 4242:8888
