@@ -1,11 +1,19 @@
 # Data platform workshop
 Materials for the "Building a modern data platform with Python and open-source tools" workshop.
 
+## Agenda
+1. Intro + set up - 1hr
+2. Intro to Prefect - 1.5hr
+3. Break - 15min
+4. Airbyte - existing source - 1hr
+5. Airbyte - new source 1hr (bonus)
+6. Wrap up - 15min
+
 ## Pre-workshop set up
 We'll be using GitHub, Docker, Prefect Cloud, and Airbyte during the workshop. To save everyone's time, please make sure you have at minimum Git + Docker with Airbyte images set up before we begin (as it needs to download quite a lot of data).
 
 ### 0. Don't use a Macbook with M1 chip
-It's fine for watching Netflix but less so for local data engineering development. 
+Great for many things, but not yet for local data engineering development. 
 
 ### 1. Install Git
 [LINK](https://git-scm.com/downloads)
@@ -13,15 +21,16 @@ It's fine for watching Netflix but less so for local data engineering developmen
 ### 2. Set up GitHub
 - create a Personal Access Token: [LINK](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 - make GitHub remember the credentials: `git config --global credential.helper store`
-- pull the [ELT workshop](https://github.com/dyvenia/elt_workshop) repo and provide the generated token as password: `git clone https://github.com/dyvenia/elt_workshop.git`
 
 ### 3. Install Docker
 - Windows/Mac: [LINK](https://docs.docker.com/get-docker/)
 - Linux: [LINK](https://docs.docker.com/engine/install/#server)
 
 ### 4. Authenticate with Docker Hub
-`docker login`
-Docker will ask you to provide your DockerHub username and password. Provide your username and access token, which you can generate in `hub.docker.com -> fingerprint icon -> Account Settings -> Security -> New Access Token`. Make sure to save that token for step 7.
+- run `docker login`
+- Docker will ask you to provide your DockerHub username and password.  
+Provide your username and access token, which you can generate in `hub.docker.com -> fingerprint icon -> Account Settings -> Security -> New Access Token`.  
+Make sure to save that token for step 7.
 
 ### 5. Install docker-compose
 > **NOTE** Linux-only (it's built into Docker on other systems)
@@ -46,6 +55,7 @@ This concludes the set up. Hit `CTRL`+`C` to spin down Airbyte.
 ### 7. Check that everything is running:
 - cretae a `.env` file in the `docker` folder (you can also just remove the `.EXAMPLE` from the example `.env` file)
 - provide values for the two variables at the top (`DOCKERHUB_USER`, `DOCKERHUB_TOKEN`)
+- run `sh setup.sh`
 
 ## Workshop set up
 ### 1. Set up Prefect Cloud
@@ -64,3 +74,6 @@ This concludes the set up. Hit `CTRL`+`C` to spin down Airbyte.
 ### 2. Set up VSCode
 - download: [LINK](https://code.visualstudio.com/download)
 - install extensions: Python, Python Docstring Generator, Live Share
+
+### 3. Set up repo
+- pull the [ELT workshop](https://github.com/dyvenia/elt_workshop) repo (provide your personal access token as password if required): `git clone https://github.com/dyvenia/elt_workshop.git`
