@@ -9,9 +9,8 @@ pipx install prefect==$PREFECT_VERSION
 
 # Authenticate to DockerHub
 docker login registry-1.docker.io -u=$DOCKERHUB_USER -p=$DOCKERHUB_TOKEN
-docker build . -t local/jupyter_with_prefect -f docker/Dockerfile --build-arg PREFECT_VERSION=$PREFECT_VERSION-python3.9
 
 cd docker && \
   docker-compose up -d && \
-  docker exec elt_jupyter_lab sh -c "prefect auth login --key  $PREFECT_API_KEY" && \
-  sh start_prefect_agent.sh
+  docker exec elt_workshop_jupyter_lab sh -c "prefect auth login --key  $PREFECT_API_KEY" && \
+  sh start_prefect_agent_sbx.sh
