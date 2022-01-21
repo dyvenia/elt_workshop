@@ -63,10 +63,6 @@ Once you see an Airbyte banner, the UI is ready at `localhost:8000`.
 
 This concludes the set up. Hit `CTRL`+`C` to spin down Airbyte.
 
-### 7. Check that everything is running:
-- cretae a `.env` file in the `docker` folder (you can also just remove the `.EXAMPLE` from the example `.env` file)
-- provide values for the two variables at the top (`DOCKERHUB_USER`, `DOCKERHUB_TOKEN`)
-- run `sh setup.sh`
 
 ## Workshop set up
 ### 1. Set up Prefect Cloud
@@ -84,7 +80,13 @@ This concludes the set up. Hit `CTRL`+`C` to spin down Airbyte.
 
 ### 2. Set up VSCode
 - download: [LINK](https://code.visualstudio.com/download)
-- install extensions: Python, Python Docstring Generator, Live Share
+- install extensions: Python, Python Docstring Generator, [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack), Live Share
 
 ### 3. Set up repo
 - pull the [ELT workshop](https://github.com/dyvenia/elt_workshop) repo (provide your personal access token as password if required): `git clone https://github.com/dyvenia/elt_workshop.git`
+
+### 7. Check that everything is running:
+- open the repo in VSCode (eg. in WSL, run `cd elt_workshop && code .`)
+- cretae a `.env` file in the `docker` folder (you can also just remove the `.EXAMPLE` from the example `.env` file)
+- provide values for the two variables at the top (`DOCKERHUB_USER`, `DOCKERHUB_TOKEN`)
+- run `sh setup.sh`
