@@ -67,20 +67,27 @@ This concludes the set up. Hit `CTRL`+`C` to spin down Airbyte.
 ## Workshop set up
 ### 1. Set up Prefect Cloud
 - go to https://cloud.prefect.io
-- register for the "Starter" plan
-- **Note: you will need to provide your credit card details** (they have 20,000 task runs/month free tier, which for personal and educational use is basically infinite. It's also very easy to delete the account after the workshop.)
+- if needed, register for the "Starter" plan
+- **Note: you might need to provide your credit card details** (they have 20,000 task runs/month free tier, which for personal and educational use is basically infinite. It's also very easy to delete the account after the workshop.)
 - create an API key:
     - click on the face logo in top right corner, then Account Settings -> API Keys
     - click "CREATE AN API KEY"
     - choose a name, eg "dyvenia_elt_workshop"
     - choose an expiration date (for us a month is enough)
     - click "CREATE"
-    - provide the token as the value of `auth_token` in .prefect/config.toml.EXAMPLE and rename the file to config.toml
+    - provide the token as the value of `auth_token` in ~/.prefect/config.toml.EXAMPLE and rename the file to config.toml
 - add the key to `docker/.env` as `PREFECT_API_KEY`
 
 ### 2. Set up VSCode
 - download: [LINK](https://code.visualstudio.com/download)
 - install extensions: Python, Python Docstring Generator, [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack), Live Share
+```
+code --install-extension ms-vscode-remote.vscode-remote-extensionpack
+code --install-extension ms-vscode-remote.vscode-remote-extensionpack
+code --install-extension ms-vscode-remote.vscode-remote-extensionpack
+
+```
+
 
 ### 3. Set up repo
 - pull the [ELT workshop](https://github.com/dyvenia/elt_workshop) repo (provide your personal access token as password if required): `git clone https://github.com/dyvenia/elt_workshop.git`
