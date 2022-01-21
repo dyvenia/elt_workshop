@@ -4,7 +4,7 @@ if [ -f docker/.env ]; then
 fi
 
 python3 -m pip install --user pipx
-python3 -m pipx ensurepath
+/home/$USER/.local/bin/pipx ensurepath
 /home/$USER/.local/bin/pipx install prefect==$PREFECT_VERSION
 
 # Authenticate to DockerHub
