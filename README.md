@@ -20,6 +20,7 @@ Great for many things, but not yet for local data engineering development.
 
 ### 2. Set up GitHub
 - create a Personal Access Token: [LINK](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+Select "Repo" as the scope.
 - make GitHub remember the credentials: `git config --global credential.helper store`
 
 ### 3. Install Docker
