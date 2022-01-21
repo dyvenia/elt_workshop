@@ -5,12 +5,12 @@ fi
 
 python3 -m pip install --user pipx
 python3 -m pipx ensurepath
-pipx install prefect==$PREFECT_VERSION
+/home/$USER/.local/bin/pipx install prefect==$PREFECT_VERSION
 
 # Authenticate to DockerHub
 docker login registry-1.docker.io -u=$DOCKERHUB_USER -p=$DOCKERHUB_TOKEN
 
-cd docker && \
+cd $PWD/../docker && \
   docker-compose up -d && \
   docker exec elt_workshop_jupyter_lab sh -c "prefect auth login --key  $PREFECT_API_KEY" && \
-  sh start_prefect_agent_sbx.sh
+  sh ../scripts/start_prefect_agent_sbx.sh

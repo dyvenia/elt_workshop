@@ -1,5 +1,5 @@
 # Load dotenv secrets into environment variables
-if [ -f .env ]; then
+if [ -f ../docker/.env ]; then
   export $(echo $(cat .env | sed 's/#.*//g'| xargs) | envsubst)
 fi
 
