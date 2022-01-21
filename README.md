@@ -18,7 +18,12 @@ Great for many things, but not yet for local data engineering development.
 ### 0b. [Windows only] Use WSL if possible
 Run `wsl --install` from an administrator Powershell or CMD to install it (you may need to [install it manually](https://docs.microsoft.com/en-us/windows/wsl/install-manual) on some Windows versions.
 
-I recommend using [Windows Termnal](https://aka.ms/terminal). You can find my settings [here](https://gist.github.com/Trymzet/0e59608c6ed85f4d7808ee2cf57b67b7).
+If you've already installed WSL with Docker, it's enough to download and install the [Ubuntu image](https://www.microsoft.com/store/productId/9NBLGGH4MSV6) from Microsoft store.
+
+I recommend using [Windows Terminal](https://aka.ms/terminal) to run all commands in WSL. You can find my settings [here](https://gist.github.com/Trymzet/0e59608c6ed85f4d7808ee2cf57b67b7). Once set up, you can open WSL shell like this:
+
+![image](https://user-images.githubusercontent.com/23084949/150587554-a7bc4412-914d-4496-bb36-2398f1456009.png)
+
 
 ### 1. Install Git
 [LINK](https://git-scm.com/downloads)
