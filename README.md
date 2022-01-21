@@ -15,6 +15,9 @@ We'll be using GitHub, Docker, Prefect Cloud, and Airbyte during the workshop. T
 ### 0. Don't use a Macbook with M1 chip
 Great for many things, but not yet for local data engineering development. 
 
+### 0b. [Windows only] Use WSL if possible
+Run `wsl --install` from an administrator Powershell or CMD to install it (you may need to [install it manually](https://docs.microsoft.com/en-us/windows/wsl/install-manual) on some Windows versions.
+
 ### 1. Install Git
 [LINK](https://git-scm.com/downloads)
 
