@@ -18,6 +18,8 @@ Great for many things, but not yet for local data engineering development.
 ### 0b. [Windows only] Use WSL if possible
 Run `wsl --install` from an administrator Powershell or CMD to install it (you may need to [install it manually](https://docs.microsoft.com/en-us/windows/wsl/install-manual) on some Windows versions.
 
+I recommend using [Windows Termnal](https://aka.ms/terminal). You can find my settings [here](https://gist.github.com/Trymzet/0e59608c6ed85f4d7808ee2cf57b67b7).
+
 ### 1. Install Git
 [LINK](https://git-scm.com/downloads)
 
