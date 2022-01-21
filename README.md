@@ -75,17 +75,16 @@ This concludes the set up. Hit `CTRL`+`C` to spin down Airbyte.
     - choose a name, eg "dyvenia_elt_workshop"
     - choose an expiration date (for us a month is enough)
     - click "CREATE"
-    - provide the token as the value of `auth_token` in ~/.prefect/config.toml.EXAMPLE and rename the file to config.toml
-- add the key to `docker/.env` as `PREFECT_API_KEY`
+- add the key to `elt_workshop/docker/.env` as `PREFECT_API_KEY`
 
 ### 2. Set up VSCode
 - download: [LINK](https://code.visualstudio.com/download)
-- install extensions: Python, Python Docstring Generator, [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack), Live Share
+- install extensions:
 ```
+code --install-extension ms-python.python
 code --install-extension ms-vscode-remote.vscode-remote-extensionpack
-code --install-extension ms-vscode-remote.vscode-remote-extensionpack
-code --install-extension ms-vscode-remote.vscode-remote-extensionpack
-
+code --install-extension MS-vsliveshare.vsliveshare-pack
+code --install-extension njpwerner.autodocstring
 ```
 
 
