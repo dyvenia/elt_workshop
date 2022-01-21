@@ -81,9 +81,9 @@ This concludes the set up. Hit `CTRL`+`C` to spin down Airbyte.
 - download: [LINK](https://code.visualstudio.com/download)
 - install extensions:
 ```
-code --install-extension ms-python.python
-code --install-extension ms-vscode-remote.vscode-remote-extensionpack
-code --install-extension MS-vsliveshare.vsliveshare-pack
+code --install-extension ms-python.python && \
+code --install-extension ms-vscode-remote.vscode-remote-extensionpack && \
+code --install-extension MS-vsliveshare.vsliveshare-pack && \
 code --install-extension njpwerner.autodocstring
 ```
 
