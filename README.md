@@ -16,13 +16,18 @@ We'll be using GitHub, Docker, Prefect Cloud, and Airbyte during the workshop. T
 Great for many things, but not yet for local data engineering development. 
 
 ### 0b. [Windows only] Use WSL if possible
-Run `wsl --install` from an administrator Powershell or CMD to install it (you may need to [install it manually](https://docs.microsoft.com/en-us/windows/wsl/install-manual) on some Windows versions.
+Run `wsl --install` from an administrator Powershell or CMD to install it (you may need to [install it manually](https://docs.microsoft.com/en-us/windows/wsl/install-manual) on some Windows versions). This method will get the image and set the WSL version to two. You may still need to enable Docker integration as per below instruction (bullet point 3).
 
-If you've already installed WSL with Docker, it's enough to download and install the [Ubuntu image](https://www.microsoft.com/store/productId/9NBLGGH4MSV6) from Microsoft store.
+If you've already installed WSL when installing Docker, you have to:
+- download and install the `Ubuntu` [image](https://www.microsoft.com/store/productId/9NBLGGH4MSV6) from Microsoft store
+- set the WSL version to 2: `wsl --set-version Ubuntu 2`
+- enable DOcker in this Ubuntu image by checking the box next to `Ubuntu` in `Docker -> Settings -> Resources -> WSL integration`
 
 I recommend using [Windows Terminal](https://aka.ms/terminal) to run all commands in WSL. You can find my settings [here](https://gist.github.com/Trymzet/0e59608c6ed85f4d7808ee2cf57b67b7). Once set up, you can open WSL shell like this:
 
 ![image](https://user-images.githubusercontent.com/23084949/150587554-a7bc4412-914d-4496-bb36-2398f1456009.png)
+
+Once in the shell, type `sudo apt update && sudo apt install python3-pip`.
 
 
 ### 1. Install Git
