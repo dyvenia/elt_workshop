@@ -7,7 +7,7 @@ fi
 docker login -u=$DOCKERHUB_USER -p=$DOCKERHUB_TOKEN
 
 # Authenticate to Prefect cloud
-prefect auth login --key  $PREFECT_API_KEY
+prefect auth login --key $PREFECT_API_KEY
 
 # Pull the Prefect image and start a Docker Agent
 prefect agent docker start --name elt_workshop_agent --label sbx --key $PREFECT_API_KEY
