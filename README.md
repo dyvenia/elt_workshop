@@ -46,7 +46,7 @@ Select "Repo" as the scope.
 - run `docker login`
 - Docker will ask you to provide your DockerHub username and password.  
 Provide your username and access token, which you can generate in `hub.docker.com -> fingerprint icon -> Account Settings -> Security -> New Access Token`.  
-Make sure to save that token for step 7.
+Make sure to save that token for step 4 of `Workshop set up`.
 
 ### 5. Install docker-compose
 > **NOTE** Linux-only (it's built into Docker on other systems)
@@ -80,7 +80,8 @@ This concludes the set up. Hit `CTRL`+`C` to spin down Airbyte.
     - choose a name, eg "dyvenia_elt_workshop"
     - choose an expiration date (for us a month is enough)
     - click "CREATE"
-- add the key to `elt_workshop/docker/.env` as `PREFECT_API_KEY`
+    - save it for now; we'll use it in step 3
+
 
 ### 2. Set up VSCode
 - download: [LINK](https://code.visualstudio.com/download)
@@ -95,9 +96,8 @@ code --install-extension njpwerner.autodocstring
 
 ### 3. Set up repo
 - pull the [ELT workshop](https://github.com/dyvenia/elt_workshop) repo (provide your personal access token as password if required): `git clone https://github.com/dyvenia/elt_workshop.git`
-
-### 7. Check that everything is running:
-- open the repo in VSCode (eg. in WSL, run `cd elt_workshop && code .`)
 - cretae a `.env` file in the `docker` folder (you can also just remove the `.EXAMPLE` from the example `.env` file)
-- provide values for the two variables at the top (`DOCKERHUB_USER`, `DOCKERHUB_TOKEN`)
-- run `sh setup.sh`
+- provide values for the three variables at the top (`DOCKERHUB_USER`, `DOCKERHUB_TOKEN`, `PREFECT_API_KEY`)
+
+### 4. Check that everything is running:
+- in the `elt_workshop` folder, run `sh scripts/setup.sh`
