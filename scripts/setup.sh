@@ -9,8 +9,3 @@ python3 -m pip install --user pipx
 
 # Authenticate to DockerHub
 docker login registry-1.docker.io -u=$DOCKERHUB_USER -p=$DOCKERHUB_TOKEN
-
-cd $PWD/../docker && \
-  docker-compose up -d && \
-  docker exec elt_workshop_jupyter_lab sh -c "prefect auth login --key  $PREFECT_API_KEY" && \
-  sh ../scripts/start_prefect_agent_sbx.sh
