@@ -72,8 +72,8 @@ This concludes the set up. Hit `CTRL`+`C` to spin down Airbyte.
 ## Workshop set up
 ### 1. Set up Prefect Cloud
 - go to https://cloud.prefect.io
-- if needed, register for the "Starter" plan
-- **Note: you might need to provide your credit card details** (they have 20,000 task runs/month free tier, which for personal and educational use is basically infinite. It's also very easy to delete the account after the workshop.)
+- choose the Free plan. If not possible, register for the "Starter" plan
+- **Note: For Starter plan, you will have to provide your credit card details** (they have 20,000 task runs/month free tier, which for personal and educational use is basically infinite. It's also very easy to delete the account after the workshop.)
 - create an API key:
     - click on the face logo in top right corner, then Account Settings -> API Keys
     - click "CREATE AN API KEY"
