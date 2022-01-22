@@ -1,6 +1,8 @@
 # Load dotenv secrets into environment variables
-if [ -f ../docker/.env ]; then
-  export $(echo $(cat .env | sed 's/#.*//g'| xargs) | envsubst)
+cd $0/../..
+
+if [ -f docker/.env ]; then
+  export $(echo $(cat docker/.env | sed 's/#.*//g'| xargs) | envsubst)
 fi
 
 # Authenticate to DockerHub
